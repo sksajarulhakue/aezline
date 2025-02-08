@@ -698,6 +698,7 @@ body {
 /* Gmail Button */
 .gmail-btn {
     background: #D44638;
+    gap: 10px;
 }
 
 .gmail-btn:hover {
@@ -707,6 +708,7 @@ body {
 /* WhatsApp Button */
 .whatsapp-btn {
     background: #25D366;
+    gap: 10px;
 }
 
 .whatsapp-btn:hover {
@@ -766,4 +768,8 @@ body {
 .client-name {
     margin-top: 20px;
     font-size: 1.2rem;
+}
+
+html {
+    scroll-behavior: smooth;
 }
