@@ -633,7 +633,7 @@ body {
 /* Build Section */
 .build-section {
     text-align: center;
-    padding: 50px 20px;
+    padding: 10px 20px;
     margin-top: -410px; /* Adjust this to move the button upwards */
     display: flex;
     flex-direction: column;
@@ -650,6 +650,16 @@ body {
     flex-direction: column;
     align-items: center;
     
+}
+
+.build-container h1 {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.build-container h1 span {
+    color: #4095be;
 }
 
 /* Description */
@@ -789,4 +799,25 @@ body {
 /* scroll smooth */
 html {
     scroll-behavior: smooth;
+}
+
+
+.new-section {
+    background-image: url('./images/body_main4.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* Adjust text color as needed */
+    font-family: Arial, sans-serif;
+}
+
+.new-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
 }
