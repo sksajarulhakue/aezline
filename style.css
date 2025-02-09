@@ -125,7 +125,7 @@ body {
 }
 
 /* Highlight the word 'Websites' */
-.tagline-text .highlight {
+.highlight {
     color: #ffc576; /* Color for 'Websites' */
     font-family: 'Lato', sans-serif;
     font-weight: bold;
