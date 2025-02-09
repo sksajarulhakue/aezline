@@ -1,3 +1,7 @@
+.html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -7,29 +11,25 @@ body {
     background-repeat: no-repeat; /* Ensures no repeat */
     
     height: 100vh; /* Ensures the body takes up the entire viewport height */
-
 }
-
 
 .header {
     background-color: transparent; /* Fully transparent background */
     color: #fff;
     padding: 20px;
     margin-left: 45px;
-    /* margin-right: 10px; */
     margin-top: 0%;
     position: fixed; /* Changed from relative to fixed */
     width: calc(91% + 7px); /* Added to ensure full width */
     background-image: url('./images/body_main4.jpg');
     background-position: center top; /* First image centered at the top, second image at the bottom */
     background-repeat: no-repeat; /* Ensures no repeat */
-    /* background-position-y: 20; */
     top: 0; /* Added to stick to top */
     z-index: 10;
-    /* border: solid 2px #000000; */
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+
 
 .container {
     display: flex;
@@ -100,15 +100,14 @@ body {
     outline: none; /* Removes default outline on focus */
 }
 
+
 .main-content {
-    /* border: 2px solid black; */
     height: max-content;
-    margin-top: 90px; /* Increased top margin to accommodate fixed header */
-    position: relative;
+    margin-top: 100px; /* Increased top margin to accommodate fixed header */
     z-index: 1;
 }
 /* For the tagline below the header */
-.tagline {
+.tagline-text {
     text-align: left; /* Align text to the left */
     color: #ffffff; /* White text color */
     font-family: 'Lato', sans-serif; /* Lato font */
@@ -120,13 +119,13 @@ body {
     margin-right: auto;
 }
 
-.tagline p {
+.tagline-text p {
     margin: 5px 0; /* Small margin between lines */
     font-size: 40px; /* Font size for tagline */
 }
 
 /* Highlight the word 'Websites' */
-.tagline .highlight {
+.tagline-text .highlight {
     color: #ffc576; /* Color for 'Websites' */
     font-family: 'Lato', sans-serif;
     font-weight: bold;
@@ -134,9 +133,9 @@ body {
 }
 
 /* Button styling for "Our Works" */
-.btn-our-works {
+.btn-our-works { /* See our Works */
     display: inline-block;
-    margin-top: 10px; /* Space from the tagline */
+    margin-top: 30px; /* Space from the tagline */
     padding: 10px 30px; /* Padding for the button */
     background-color: #ffc576; /* Button color */
     color: #000000; /* Button text color */
@@ -147,7 +146,6 @@ body {
     font-size: 15px; /* Font size for the button */
     transition: background-color 0.3s ease; /* Smooth transition on hover */
     margin-left: 12pc;
-    margin-top: -20px; /* Adjust this to move the button upwards */
 }
 
 .btn-our-works:hover {
@@ -173,7 +171,6 @@ body {
 }
 
 /* Styling for the About Aezline Section */
-/* Styling for the About Aezline Section */
 .about-aezline {
     color: #000000;
     font-family: 'Lato', sans-serif;
@@ -182,24 +179,19 @@ body {
     background-color: #ffffff;
     border-radius: 10px;
     max-width: 800px;
-    margin: 30px auto 15pc auto; /* Simplified margin with top auto centering */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative; /* Keeps the content relative to its container */
     display: flex; /* Enables flexbox for side-by-side layout */
     justify-content: center; /* Centers content */
     align-items: center; /* Centers content vertically */
     border-bottom: 5px solid #ffc576; /* Add a bottom accent line */
-    top: 8pc;
-    position: relative;
-    left: 10px;
-  
+    
 }
 
 /* Optional: Absolute positioning for easy movement */
 .about-aezline.movable {
-    position: absolute;
-    bottom: 800px; /* Moves it 20px from the bottom of the page */
-    left: 50%; /* Centers it horizontally */
     transform: translateX(-50%); /* Ensures horizontal centering */
 }
 
@@ -244,6 +236,7 @@ body {
     border-radius: 8px; /* Optional rounded corners */
 }
 
+
 /* General Section Styling */
 .what-we-offer {
     text-align: center;
@@ -254,6 +247,7 @@ body {
     flex-direction: column;
     gap: 0px;
     margin: 0 auto;
+    margin-top: 13pc;
 }
 
 .what-we-offer h2 {
@@ -300,38 +294,32 @@ body {
 }
 
 /* Our Process Section */
-.our-process {
+.process {
     background: url('./images/body_main3.jpg') center/cover no-repeat;
     color: #fff;
+    background-position-x: -3px;
     text-align: center;
-    position: relative;
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 150px 0px;
+    padding-left: 210px;
+    padding-right: 40px;
 }
 
-.our-process h2 {
+.process h2 {
     font-size: 40px;
     font-weight: 700;
     color: #f1e5d9;
     text-transform: uppercase;
     letter-spacing: 3px;
     line-height: 1.2;
-    position: relative;
-    top: 35pc;
-    /* position: relative; */
-    right: 20pc;
+    margin-top: 13pc;
 }
 
-.our-process a {
-    position: relative;
-    top: 34pc;
-}
-
-.our-process .main-title {
+.process .main-title {
     font-size: 50px;
     font-weight: 700;
     background: linear-gradient(45deg, #b15800, #d4b895);
@@ -344,7 +332,7 @@ body {
     
 }
 
-.our-process .main-title::after {
+.process .main-title::after {
     content: "";
     display: block;
     width: 80px;
@@ -363,9 +351,7 @@ body {
     margin: auto;
     text-align: left;
     margin-right: 10pc;
-    top: 13pc;
-    position: relative;
-    left: -3pc;
+    margin-top: 13pc;
 }
 
 
@@ -378,7 +364,6 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
     transition: 0.3s ease;
-    position: relative;
     overflow: hidden;
 }
 
@@ -484,9 +469,6 @@ body {
     letter-spacing: 0.5px; /* Slight letter spacing for readability */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     transition: all 0.3s ease; /* Smooth transition for all properties */
-    top: 40pc;
-    position: relative;
-    right: 20pc;
 }
 
 .start:hover {
@@ -513,10 +495,6 @@ body {
     max-width: 1200px;
     margin: 5px auto;
     border-radius: 10px;
-    position: relative;
-    top: 20pc;
-    right: -2pc;
-    left: 1pc;
 }
 
 .our-portfolio h2 {
@@ -524,10 +502,6 @@ body {
     color: #ffc576;
     margin-bottom: 20px;
     font-weight: bold;
-    position: relative;
-    top: -2pc;
-    right: -2pc;
-    left: -1pc;
 }
 
 .our-portfolio p {
@@ -536,35 +510,20 @@ body {
     line-height: 1.5;
     max-width: 800px;
     margin: 0 auto;
-    position: relative;
-    top: -2pc;
-    right: -2pc;
-    left: -1pc;
 }
 
-.our-portfolio a {
-    position: relative;
-    top: 0pc;
-}
 
 /* Portfolio Slider */
 .portfolio-slider {
     display: flex;
     overflow: hidden;
-    position: relative;
     width: 100%;
     margin-top: 30px;
-    top: -2pc;
-    right: -2pc;
-    left: -1pc;
 }
 
 /* Add white gradient on the left and right sides */
 .portfolio-slider::after {
     content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
     width: 10%;
     background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
     z-index: 2;
@@ -572,9 +531,6 @@ body {
 
 .portfolio-slider::before {
     content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
     width: 10%;
     background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
     z-index: 2;
@@ -622,6 +578,12 @@ body {
 
 
 /* Button styling for "Our Works2" */
+.button-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3pc;
+}
 .btn-our-works2 {
     display: inline-block;
     margin-top: 10px; /* Space from the tagline */
@@ -635,11 +597,11 @@ body {
     font-size: 15px; /* Font size for the button */
     transition: background-color 0.3s ease; /* Smooth transition on hover */
     margin-left: -1pc;
-    margin-top: -20px; /* Adjust this to move the button upwards */
 }
 
 .btn-our-works2:hover {
     background-color: #e68900; /* Darken the button on hover */
+    color: #ffffff;
 }
 
 
@@ -647,12 +609,10 @@ body {
 .build-section {
     text-align: center;
     padding: 50px 20px;
-    margin-top: -410px; /* Adjust this to move the button upwards */
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    top: 50pc;
+    margin-top: 4pc;
 }
 
 
@@ -686,9 +646,8 @@ body {
 .contact-buttons {
     display: flex;
     justify-content: center;
+    margin-top: 2pc;
     gap: 20px;
-    position: relative;
-    top: -33pc;
     flex-wrap: wrap;
 }
 
@@ -733,7 +692,7 @@ body {
 
 
 .clients-section {
-    position: relative;
+    /* position: relative; */
     text-align: center;
     padding: 80px 20px;
     background: url('your-background.jpg') no-repeat center center/cover;
@@ -787,9 +746,6 @@ body {
 }
 
 .discount-div {
-    /* margin-top: 500px; */
-    position: relative;
-    top: 50pc;
     min-height: 144px;
     display: flex;
     gap: 20px;
