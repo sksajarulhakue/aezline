@@ -867,6 +867,7 @@ body {
 
 .footer-section.links ul {
     list-style: none;
+    margin-left: -40px;
 }
 
 .footer-section.links li {
