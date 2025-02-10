@@ -67,3 +67,57 @@ document.querySelector('a[href="#contact"]').addEventListener('click', function(
         block: 'center'
     });
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sliders = document.querySelectorAll(".portfolio-container");
+
+    sliders.forEach((slider) => {
+        let randomSpeed = Math.random() * 20 + 10; // Speed between 10s and 30s
+        let randomDirection = Math.random() > 0.5 ? "normal" : "reverse"; // Random direction
+
+        slider.style.animation = `slideLoop ${randomSpeed}s linear infinite ${randomDirection}`;
+    });
+});
+
+
+
+
+const banner = document.querySelector('.banner-container');
+const dots = document.querySelectorAll('.dot');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+let currentSlide = 0;
+
+// Update dots
+function updateDots(index) {
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+}
+
+// Navigate to specific slide
+function goToSlide(index) {
+    currentSlide = index;
+    banner.style.transform = `translateX(-${currentSlide * 20}%)`;
+    updateDots(currentSlide);
+}
+
+// Event listeners for navigation
+prevBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + 5) % 5;
+    goToSlide(currentSlide);
+});
+
+nextBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % 5;
+    goToSlide(currentSlide);
+});
+
+// Add click events to dots
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        goToSlide(index);
+    });
+});
