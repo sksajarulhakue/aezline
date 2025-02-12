@@ -1205,10 +1205,13 @@ html {
 
 .footer-segments {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     gap: 40px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     margin-bottom: 40px;
+    /* background-color: red; */
 }
 
 .footer-item {
@@ -1324,6 +1327,7 @@ html {
 }
 
 .footer-bottom {
+    border: 1px solid white;
     margin-top: 50px;
     padding: 20px;
     background: rgba(0, 0, 0, 0.2);
@@ -1369,3 +1373,151 @@ html {
         width: 100%;
     }
 }
+
+
+/* Font Imports */
+@font-face {
+    font-display: block;
+    font-family: 'Roboto';
+    src: url('https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2') format('woff2'),
+         url('https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff') format('woff');
+  }
+  
+  @font-face {
+    font-display: fallback;
+    font-family: 'Roboto';
+    font-weight: 600;
+    src: url('https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2') format('woff2'),
+         url('https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff') format('woff');
+  }
+  
+  @font-face {
+    font-display: fallback;
+    font-family: 'Roboto';
+    font-weight: 700;
+    src: url('https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2') format('woff2'),
+         url('https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff') format('woff');
+  }
+  
+  
+  .sib-form {
+    text-align: center;
+    background-color: transparent;
+    /* background-color: red; */
+    /* min-height: 20px; */
+  }
+  
+  .sib-form-container {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+  
+  #sib-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    /* border: 1px solid #C0CCD9; */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    /* background-color: red; */
+    height: 245px;
+  }
+  
+  /* Message Panels */
+  .sib-form-message-panel {
+    font-size: 12px;
+    font-family: Helvetica, sans-serif;
+    border-radius: 3px;
+    max-width: 140px;
+    /* margin: 10px auto; */
+  }
+  
+  .sib-form-message-panel__text {
+    display: flex;
+    align-items: center;
+  }
+  
+  .sib-notification__icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+  
+
+  .title-block {
+    font-size: 22px;
+    font-weight: bold;
+    /* margin-top: -10px; */
+    margin-bottom: -5px;
+    color: #ffc576;
+  }
+  
+  .subtitle-block {
+    font-size: 15px;
+    color: #e8e9eb;
+  }
+  
+  .input-block .input {
+    width: 90%;
+    padding: 10px;
+    /* margin-right: 0px; */
+    border: 1px solid #C0CCD9;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #030d28;
+    margin-bottom: 10px;
+  }
+  
+  .input::placeholder {
+    color: #c0ccda;
+  }
+  
+  .optin-block .checkbox {
+    margin-left: 5px;
+    /* margin-bottom: 50px; */
+  }
+  
+  .optin-text {
+    font-size: 14px;
+    /* margin-bottom: 50px; */
+    color: #ffffff;
+  }
+  
+  .submit-block .sib-form-block__button {
+    font-size: 16px;
+    height: 45px;
+    margin-top: 5px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: #3E4857;
+    border-radius: 9px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .submit-block .sib-form-block__button:hover {
+    background-color: #2e3744;
+  }
+  
+  /* Error Messages */
+  .entry__error {
+    display: none;
+    font-size: 16px;
+    color: #661d1d;
+    background-color: #ffeded;
+    border-radius: 3px;
+    border: 1px solid #ff4949;
+    padding: 5px;
+    margin-top: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .sib-form-container {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  
