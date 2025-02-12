@@ -6,6 +6,7 @@
     <title>WebDev - Professional Web Development Services</title>
     <link rel="stylesheet" href="our-works.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -130,62 +131,130 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <!-- Company Info -->
-                <div class="footer-section">
-                    <h3>Aezline</h3>
-                    <p>Transforming ideas into exceptional digital experiences through innovative web development solutions.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div class="footer-section links">
-                    <h4>Company</h4>
+    <section id="footer">
+        <div class="footer-content">
+            <div class="footer-header">
+                <h3>Click, Build, Dream!</h3>
+                <p>Let’s turn your vision into a reality with a website that wows!</p>
+            </div>
+            
+    
+            <div class="footer-segments">
+                <div class="footer-item">
+                    <h3>Company</h3>
                     <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
                         <li><a href="Privacy Policy.html">Privacy Policy</a></li>
                     </ul>
                 </div>
-
-                <div class="footer-section links">
-                    <h4>Services</h4>
+    
+                <div class="footer-item">
+                    <h3>Services</h3>
                     <ul>
-                        <li>Web Development</li>
-                        <li>UI/UX Design</li>
-                        <li>E-commerce</li>
-                        <li>Maintenance</li>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Graphics Designing</a></li>
+                        <li><a href="#">Maintenance</a></li>
                     </ul>
                 </div>
+    
+                
+                <!-- Begin Brevo Form -->
+                <div class="sib-form">
+                    <div id="sib-form-container" class="sib-form-container">
+                    
 
-                <!-- Newsletter -->
-                <div class="footer-section">
-                    <h4>Stay Updated</h4>
-                    <p>Subscribe to our newsletter for the latest updates and insights.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email">
-                        <button type="submit" class="btn primary">Subscribe</button>
-                    </form>
+                    <!-- Subscription Form -->
+                    <div id="sib-container" class="sib-container--large sib-container--vertical">
+                        <form id="sib-form" method="POST" action="https://5a3778a8.sibforms.com/serve/MUIFAI7L9dHaMYyKxhh7krz44aOoKjyhajSWPHoqkAx0DyyW0wGpmP8H98GB1U2tZLjNfHenjg1Z3eLMelHfCqvYO85WcoxpgOxgCNqXOQbfhQUpfEvMeXNzdyeN13MFMdYs1pUEAAvQokkvAb2W7XLI3c-9Tpg8pBHOHLWxrdTAacUb-rMnQDR0Wl4eDd6fDRTuN4KhJrJkEgmu" data-type="subscription">
+                        <!-- Title -->
+                        <div class="sib-form-block title-block">
+                            <p>STAY UPDATED</p>
+                        </div>
+
+                        <!-- Subtitle -->
+                        <div class="sib-form-block subtitle-block">
+                            <p>Join our newsletter and never miss an update!</p>
+                        </div>
+
+                        <!-- Email Input -->
+                        <div class="sib-form-block input-block">
+                            <div class="sib-input">
+                            <div class="form__entry entry_block">
+                                <div class="form__label-row">
+                                <div class="entry__field">
+                                    <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="Your email address . . ." data-required="true" required />
+                                </div>
+                                </div>
+                                <label class="entry__error entry__error--primary"></label>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- Opt-in Checkbox -->
+                        <div class="sib-form-block optin-block">
+                            <div class="sib-optin">
+                            <div class="form__entry entry_mcq">
+                                <div class="form__label-row">
+                                <div class="entry__choice">
+                                    <label>
+                                    <input type="checkbox" class="input_replaced" value="1" id="OPT_IN" name="OPT_IN" />
+                                    <span class="checkbox checkbox_tick_positive"></span>
+                                    <span class="optin-text">I agree to receive your newsletters and accept the data privacy statement.</span>
+                                    </label>
+                                </div>
+                                </div>
+                                <label class="entry__error entry__error--primary"></label>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="sib-form-block submit-block">
+                            <button class="sib-form-block__button sib-form-block__button-with-loader" type="submit">
+                            <!-- <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512"> -->
+                                <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199..."></path>
+                            </svg>
+                            SUBSCRIBE
+                            </button>
+                        </div>
+
+                        </form>
+                    </div>
+                    </div>
+                </div>
+                <!-- End Brevo Form -->
+                
+            </div>
+    
+            <div class="footer-socials">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
                 </div>
             </div>
-
+            
+    
             <div class="footer-bottom">
-                <p>&copy; 2025 Aezline. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#">Terms</a>
-                    <a href="Privacy Policy.html">Privacy</a>
-                    <a href="#">Cookies</a>
-                </div>
+                <p>&copy; 2025 Aezline. All rights reserved. | <a href="#">Terms</a> | <a href="Privacy Policy.html">Privacy</a> | <a href="#">Cookies</a></p>
             </div>
         </div>
-    </footer>
+    </section>
+
+    <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 
     <script src="work.js"></script>
 </body>
