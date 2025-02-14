@@ -277,7 +277,7 @@ body {
     border: none;
     padding: 10px 15px; /* More padding for better click area */
     cursor: pointer;
-    z-index: 10;
+    z-index: 5;
     border-radius: 5px; /* Rounded corners for buttons */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for buttons */
     transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
