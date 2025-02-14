@@ -968,6 +968,11 @@ html {
     text-align: center;
     padding: 1rem;
 }
+
+
+.basic-plan-footer {
+    margin-top: 50px;
+}
 .plan-footer button {
     background: linear-gradient(to right, #6b46c1, #5a67d8);
     color: white;
@@ -1477,6 +1482,13 @@ html {
     text-decoration: underline;
     color: #9bd4f5;
   }
+
+  /* Add this at the end of your CSS file */
+.newsletter-form {
+    text-align: center;
+    background-color: transparent;
+}
+
   #newsletter-btn:hover {
     transform: scale(1.1); /* Increase size by 10% */
 }
