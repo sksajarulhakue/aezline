@@ -843,9 +843,16 @@ html {
 .pricing-table {
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
     gap: 1.5rem;
+    overflow-y: visible;
+    margin-left: 45px;
+    margin-right: 45px;
     background-color: #030d28;
-    padding: 150px 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 150px;
+    padding-bottom: 50px;
     
 }
 @media (min-width: 768px) {
@@ -853,6 +860,14 @@ html {
         flex-direction: row;
     }
 }
+
+.pricing-table {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
 .pricing-table h1 {
     color: white;
     text-align: center;
@@ -860,22 +875,28 @@ html {
     font-weight: bold;
     margin-top: -110px;
     margin-bottom: 20px;
-    position: relative;
-    left: 34pc;
     white-space: nowrap; /* Prevents text from breaking into multiple lines */
 }
 
-
+.plans {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+}
 
 .plan {
     background-color: white;
     border-radius: 1rem;
     overflow: hidden;
     width: 50rem;
+    height: 50rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    right: 8pc;
 }
+
+
 .plan-header {
     text-align: center;
     padding: 1rem;
@@ -904,6 +925,8 @@ html {
 }
 .plan-body {
     padding: 1.5rem;
+    height: 495px;
+    overflow-y: hidden;
 }
 .plan-body ul {
     list-style: none;
@@ -924,6 +947,16 @@ html {
 .plan-body li i.fa-times {
     color: #f56565;
 }
+
+#seeMoreGold, #seeMorePremium {
+    padding-left: 20px;
+}
+
+#seeMoreGold a, #seeMorePremium a {
+    text-decoration: none;
+    
+}
+
 .plan-footer {
     text-align: center;
     padding: 1rem;
@@ -1085,6 +1118,7 @@ html {
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
     transition: transform 0.5s ease, box-shadow 0.5s ease;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 255, 255, 0.2);
     transform: rotate(-3deg);
@@ -1165,7 +1199,11 @@ html {
     }
 }
 
-
+.strip{
+    background-color: white;
+    width: 100%;
+    height: 20px;
+}
 
 
 #footer {
@@ -1390,146 +1428,48 @@ html {
 /* Font Imports */
 @font-face {
     font-display: block;
-    font-family: 'Roboto';
-    src: url('https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2') format('woff2'),
-         url('https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff') format('woff');
+    font-family: Roboto;
+    src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
   }
-  
-  @font-face {
-    font-display: fallback;
-    font-family: 'Roboto';
-    font-weight: 600;
-    src: url('https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2') format('woff2'),
-         url('https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff') format('woff');
-  }
-  
-  @font-face {
-    font-display: fallback;
-    font-family: 'Roboto';
-    font-weight: 700;
-    src: url('https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2') format('woff2'),
-         url('https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff') format('woff');
-  }
-  
-  
-  .sib-form {
-    text-align: center;
-    background-color: transparent;
-    /* background-color: red; */
-    /* min-height: 20px; */
-  }
-  
-  .sib-form-container {
-    max-width: 540px;
-    margin: 0 auto;
-  }
-  
-  #sib-container {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    /* border: 1px solid #C0CCD9; */
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 5px;
-    /* background-color: red; */
-    height: 245px;
-  }
-  
-  /* Message Panels */
-  .sib-form-message-panel {
-    font-size: 12px;
-    font-family: Helvetica, sans-serif;
-    border-radius: 3px;
-    max-width: 140px;
-    /* margin: 10px auto; */
-  }
-  
-  .sib-form-message-panel__text {
-    display: flex;
-    align-items: center;
-  }
-  
-  .sib-notification__icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-    fill: currentColor;
-  }
-  
 
-  .title-block {
-    font-size: 22px;
-    font-weight: bold;
-    /* margin-top: -10px; */
-    margin-bottom: -5px;
-    color: #ffc576;
+  @font-face {
+    font-display: fallback;
+    font-family: Roboto;
+    font-weight: 600;
+    src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
   }
-  
-  .subtitle-block {
-    font-size: 15px;
-    color: #e8e9eb;
+
+  @font-face {
+    font-display: fallback;
+    font-family: Roboto;
+    font-weight: 700;
+    src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
   }
+
   
-  .input-block .input {
-    width: 90%;
-    padding: 10px;
-    /* margin-right: 0px; */
-    border: 1px solid #C0CCD9;
-    border-radius: 5px;
-    font-size: 12px;
-    color: #030d28;
-    margin-bottom: 10px;
+  #sib-container input:-ms-input-placeholder {
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+    color: #c0ccda;
+    height: 10px;
   }
-  
-  .input::placeholder {
+
+  #sib-container input::placeholder {
+    text-align: left;
+    font-family: Helvetica, sans-serif;
     color: #c0ccda;
   }
-  
-  .optin-block .checkbox {
-    margin-left: 5px;
-    /* margin-bottom: 50px; */
+
+  #sib-container textarea::placeholder {
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+    color: #c0ccda;
   }
-  
-  .optin-text {
-    font-size: 14px;
-    /* margin-bottom: 50px; */
-    color: #ffffff;
+
+  #sib-container a {
+    text-decoration: underline;
+    color: #9bd4f5;
   }
-  
-  .submit-block .sib-form-block__button {
-    font-size: 16px;
-    height: 45px;
-    margin-top: 5px;
-    font-weight: 700;
-    color: #FFFFFF;
-    background-color: #3E4857;
-    border-radius: 9px;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  .submit-block .sib-form-block__button:hover {
-    background-color: #2e3744;
-  }
-  
-  /* Error Messages */
-  .entry__error {
-    display: none;
-    font-size: 16px;
-    color: #661d1d;
-    background-color: #ffeded;
-    border-radius: 3px;
-    border: 1px solid #ff4949;
-    padding: 5px;
-    margin-top: 5px;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 600px) {
-    .sib-form-container {
-      width: 100%;
-      padding: 10px;
-    }
-  }
-  
+  #newsletter-btn:hover {
+    transform: scale(1.1); /* Increase size by 10% */
+}

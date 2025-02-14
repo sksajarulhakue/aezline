@@ -124,6 +124,7 @@ dots.forEach((dot, index) => {
 
 
   window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
   window.LOCALE = 'en';
   window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
 
@@ -142,3 +143,39 @@ dots.forEach((dot, index) => {
   };
 
   var AUTOHIDE = Boolean(0);
+
+// Plan See More
+function onChangeGold(){
+    event.preventDefault()
+    var gold = document.getElementById('gold');
+    var gold_plan = document.getElementById('gold-plan');
+    let seeMoreParagraph = document.getElementById('seeMoreGold').querySelector('p');
+
+    if (gold.style.height != '700px'){
+        gold.style.height = '700px'; //change height of gold to 700px
+        gold_plan.style.height = '1000px';
+        seeMoreParagraph.innerText = "See less ..."; // Change the text inside the <p> element
+    }
+    else{
+        gold.style.height = '495px';
+        gold_plan.style.height = '50rem';
+        seeMoreParagraph.innerText = "See 6 more ..."; // Change the text inside the <p> element
+
+    }
+}
+function onChangePremium() {
+    event.preventDefault();
+    var premium = document.getElementById('premium');
+    var premiumPlan = document.getElementById("premium-plan");
+    var seeMoreParagraph = document.getElementById('seeMorePremium').querySelector('p'); // Select the <p> inside #seeMore
+
+    if (premium.style.height != '880px') {
+        premium.style.height = '880px';
+        premiumPlan.style.height = "1180px";
+        seeMoreParagraph.innerText = "See less ..."; // Change the text inside the <p> element
+    } else {
+        premium.style.height = '495px';
+        premiumPlan.style.height = '50rem';
+        seeMoreParagraph.innerText = "See 8 more ..."; // Change the text inside the <p> element
+    }
+}
