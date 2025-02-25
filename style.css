@@ -17,7 +17,7 @@ body {
     background-color: transparent; /* Fully transparent background */
     color: #fff;
     padding: 20px;
-    margin-left: 45px;
+    margin-left: 37px;
     margin-top: 0%;
     position: fixed; /* Changed from relative to fixed */
     width: calc(91% + 7px); /* Added to ensure full width */
@@ -26,8 +26,7 @@ body {
     background-repeat: no-repeat; /* Ensures no repeat */
     top: 0; /* Added to stick to top */
     z-index: 10;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+   
 }
 
 .main-content {
