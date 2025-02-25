@@ -21,7 +21,7 @@ body {
     margin-top: 0%;
     position: fixed; /* Changed from relative to fixed */
     width: calc(91% + 7px); /* Added to ensure full width */
-    background-image: url('./images/body_main4.jpg');
+    background-image: url('./images/header.png');
     background-position: center top; /* First image centered at the top, second image at the bottom */
     background-repeat: no-repeat; /* Ensures no repeat */
     top: 0; /* Added to stick to top */
