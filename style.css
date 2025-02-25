@@ -29,9 +29,6 @@ body {
    
 }
 
-.main-content {
-    overflow-y: visible;
-}
 
 .container {
     display: flex;
